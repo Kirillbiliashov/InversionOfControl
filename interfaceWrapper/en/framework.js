@@ -92,11 +92,10 @@ const context = {
   Math,
   // Forward link to fs API into sandbox
   fs: interfaceWrapper(api.fs),
-  //fs: interfaceWrapper(api.fs);
   // Wrapper for setTimeout in sandbox
   timers: api.timers,
 };
-//timeout: (msec, cb) => setTimeout(cb, msec) 
+
 // Turn hash into context
 context.global = context;
 const sandbox = api.vm.createContext(context);
